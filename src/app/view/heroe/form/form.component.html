@@ -1,7 +1,7 @@
 <div>
-    <mat-grid-list cols="3" rowHeight="5:1">
 
     <form [formGroup]="formGroup">
+        <mat-grid-list cols="4" rowHeight="2:1">
     <mat-grid-tile>
         <mat-form-field>
             <mat-label>Ingresa tu nombre completo</mat-label>
@@ -26,10 +26,12 @@
                 <input formControlName="tel" type="tel" matInput>
             </mat-form-field>
         </mat-grid-tile>
-        <mat-grid-tile>
-            <button (click)="submit()" [disabled]="formGroup.invalid" mat-flat-button color="primary">Subir</button>
-
-        </mat-grid-tile>
-    </form>
     </mat-grid-list>
+<mat-grid-list cols="4" rowHeight="2:1">
+    <mat-grid-tile>
+        <button (click)="submit()" [disabled]="formGroup.invalid" mat-flat-button color="primary">Subir</button>
+    </mat-grid-tile>
+</mat-grid-list>
+
+    </form>
 </div>
