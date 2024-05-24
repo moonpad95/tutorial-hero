@@ -1,0 +1,35 @@
+<div>
+    <mat-grid-list cols="3" rowHeight="5:1">
+
+    <form [formGroup]="formGroup">
+    <mat-grid-tile>
+        <mat-form-field>
+            <mat-label>Ingresa tu nombre completo</mat-label>
+            <input formControlName="name" matInput>
+        </mat-form-field>
+    </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field>
+                <mat-label>Ingresa tu correo</mat-label>
+                <input formControlName="email" matInput>
+                </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field>
+                <mat-label>Ingresa tu contrasena</mat-label>
+                <input formControlName="password" type="password" matInput>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field>
+                <mat-label>Ingresa tu numero de telefono</mat-label>
+                <input formControlName="tel" type="tel" matInput>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <button (click)="submit()" [disabled]="formGroup.invalid" mat-flat-button color="primary">Subir</button>
+
+        </mat-grid-tile>
+    </form>
+    </mat-grid-list>
+</div>
